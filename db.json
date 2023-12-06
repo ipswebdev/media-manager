@@ -1,0 +1,22 @@
+{
+  "users": [
+    {
+      "name": "Dr. Pat Bechtelar",
+      "id": 5
+    },
+    {
+      "name": "Marilyn Armstrong MD",
+      "id": 6
+    },
+    {
+      "name": "Guadalupe Buckridge",
+      "id": 7
+    },
+    {
+      "name": "Diana Schaefer",
+      "id": 8
+    }
+  ],
+  "photos": [],
+  "albums": []
+}
