@@ -4,25 +4,15 @@ import { fetchUsers, addUser, removeUser } from "../store";
 import Skeleton from "./Skeleton";
 import Button from "./Button";
 import { useThunk } from "../hooks/useThunk";
+import UserListItem from "./UserListItem";
 
 
 function UsersList(){
     const [doFetchUsers,isLoadingUsers,loadingUsersError] =  useThunk(fetchUsers);
     const [doCreateUser,creatingUserLoading,creatingUserError] =  useThunk(addUser);
-    const [doRemoveUser,removingUserLoading,removingUserError] =  useThunk(removeUser);
     const {data} = useSelector((state)=>state.users);
     const renderedUsers = data.map((user,i) => {return(
-        <div key={i} className="mb-2 border rounded">
-            <div className="flex p-2 justify-between items-center cursor-pointer">
-                <div>
-                <Button loading={creatingUserLoading} onClick={()=>handleUserRemove(user)}>X Delete</Button>
-                {user.name}
-                </div>
-                <span>
-                    v
-                </span>                
-            </div>
-        </div>
+        <UserListItem key={i} loading={creatingUserLoading}  user={user}></UserListItem>
     )})
 
     useEffect(()=>{
@@ -33,9 +23,7 @@ function UsersList(){
         doCreateUser()
     }
 
-    const handleUserRemove=(user)=>{
-        doRemoveUser(user)
-    }
+    
 
     if(isLoadingUsers){
         return(<div>
