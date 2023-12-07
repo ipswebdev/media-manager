@@ -18,5 +18,56 @@
     }
   ],
   "photos": [],
-  "albums": []
+  "albums": [
+    {
+      "title": "Brian's Albums",
+      "id": 1,
+      "userId": 18
+    },
+    {
+      "userId": 18,
+      "title": "Bespoke Cotton Bike",
+      "id": 2
+    },
+    {
+      "userId": 18,
+      "title": "Electronic Rubber Shoes",
+      "id": 3
+    },
+    {
+      "userId": 18,
+      "title": "Electronic Wooden Bacon",
+      "id": 4
+    },
+    {
+      "userId": 18,
+      "title": "Incredible Steel Ball",
+      "id": 5
+    },
+    {
+      "userId": 18,
+      "title": "Rustic Metal Tuna",
+      "id": 6
+    },
+    {
+      "userId": 18,
+      "title": "Ergonomic Concrete Table",
+      "id": 7
+    },
+    {
+      "userId": 23,
+      "title": "Licensed Metal Table",
+      "id": 8
+    },
+    {
+      "userId": 24,
+      "title": "Ergonomic Metal Sausages",
+      "id": 9
+    },
+    {
+      "userId": 24,
+      "title": "Intelligent Cotton Tuna",
+      "id": 10
+    }
+  ]
 }
