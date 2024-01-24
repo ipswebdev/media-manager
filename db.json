@@ -17,7 +17,28 @@
       "id": 24
     }
   ],
-  "photos": [],
+  "photos": [
+    {
+      "albumId": 2,
+      "url": "https://picsum.photos/seed/XTLxZ/150/150",
+      "id": 1
+    },
+    {
+      "albumId": 2,
+      "url": "https://picsum.photos/seed/1Yrb4UN/150/150",
+      "id": 2
+    },
+    {
+      "albumId": 1,
+      "url": "https://loremflickr.com/150/150?lock=6983006239588352",
+      "id": 3
+    },
+    {
+      "albumId": 1,
+      "url": "https://loremflickr.com/150/150?lock=4803360540590080",
+      "id": 6
+    }
+  ],
   "albums": [
     {
       "title": "Brian's Albums",
@@ -55,19 +76,54 @@
       "id": 7
     },
     {
-      "userId": 23,
-      "title": "Licensed Metal Table",
-      "id": 8
-    },
-    {
-      "userId": 24,
-      "title": "Ergonomic Metal Sausages",
-      "id": 9
-    },
-    {
       "userId": 24,
       "title": "Intelligent Cotton Tuna",
       "id": 10
+    },
+    {
+      "userId": 18,
+      "title": "Awesome Metal Hat",
+      "id": 11
+    },
+    {
+      "userId": 18,
+      "title": "Fantastic Metal Table",
+      "id": 12
+    },
+    {
+      "userId": 24,
+      "title": "Gorgeous Rubber Soap",
+      "id": 13
+    },
+    {
+      "userId": 22,
+      "title": "Practical Cotton Shoes",
+      "id": 14
+    },
+    {
+      "userId": 22,
+      "title": "Awesome Fresh Ball",
+      "id": 15
+    },
+    {
+      "userId": 18,
+      "title": "Rustic Soft Cheese",
+      "id": 16
+    },
+    {
+      "userId": 18,
+      "title": "Electronic Wooden Shirt",
+      "id": 17
+    },
+    {
+      "userId": 24,
+      "title": "Licensed Metal Soap",
+      "id": 18
+    },
+    {
+      "userId": 23,
+      "title": "Refined Metal Mouse",
+      "id": 19
     }
   ]
 }

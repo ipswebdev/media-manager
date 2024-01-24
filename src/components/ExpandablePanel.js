@@ -10,7 +10,7 @@ function ExpandablePanel({header,children}){
             <div className="flex p-2 justify-between items-center cursor-pointer">
                 {header}
             </div>
-            <div>{isExpanded ? <GoChevronLeft /> : <GoChevronDown />}</div>
+            <div>{isExpanded ? <GoChevronDown /> : <GoChevronLeft />}</div>
         </div>
         <div>{ isExpanded && <div className="p-2 border-t">{children}</div>}</div>
     </>  

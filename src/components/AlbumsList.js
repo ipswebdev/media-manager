@@ -2,10 +2,11 @@ import { useFetchAlbumsQuery,useAddAlbumMutation } from "../store";
 import Skeleton from './Skeleton'
 import Button from './Button'
 import ExpandablePanel from "./ExpandablePanel";
+import AlbumsListItem from "./AlbumListItem";
 
 
 function AlbumsList({user}){
-    const {data,error,isLoading,isFetching} = useFetchAlbumsQuery(user);
+    const {data,error,isFetching} = useFetchAlbumsQuery(user);
     const [addAlbum, results] = useAddAlbumMutation();
     console.log('addAlb res',results)
     let content;
@@ -16,23 +17,23 @@ function AlbumsList({user}){
     }
 
     if(isFetching){
-        content = <Skeleton times={3} />
+        content = <Skeleton times={3} className={'h-10 w-full'}/>
     }
     else if(error){
         content = <div>Error Loading Albums</div>
     }
     else{
-        header = <div>{user.name}'s Album:</div>
+        header = <div>Album:</div>
         content = data.map((alb)=>{
             return(
-                <div key={alb.id}>Title: {alb.title}</div>
+                <AlbumsListItem album={alb} key={alb.id}/>
             )
         })
     }
     return (
         <div>
-            <Button onClick={() => handleButtonAdd(user)}>+ Add Album</Button>
-            <ExpandablePanel header={header}><div>{header}</div>
+            <Button loading={results.isLoading} onClick={() => handleButtonAdd(user)}>+ Add Album</Button>
+            <ExpandablePanel header={header}>
             {content && content.length ? content : 'No Albums'}</ExpandablePanel>  
         </div>
     )

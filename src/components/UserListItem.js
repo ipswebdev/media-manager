@@ -4,6 +4,7 @@ import { removeUser } from "../store";
 import Button from "./Button";
 import ExpandablePanel from "./ExpandablePanel";
 import AlbumsList from "./AlbumsList";
+import { GoTrashcan } from "react-icons/go";
 
 function UserListItem({user,loading}){
     const [doRemoveUser,removingUserLoading,removingUserError] =  useThunk(removeUser);
@@ -13,7 +14,7 @@ function UserListItem({user,loading}){
     }
 
     const header =<Fragment>
-        <Button loading={loading} onClick={(e)=>{e.stopPropagation();handleUserRemove(user)}}>X Delete</Button>
+        <Button loading={loading} onClick={(e)=>{e.stopPropagation();handleUserRemove(user)}}><GoTrashcan /></Button>
         {user.name}           
     </Fragment>;
 
